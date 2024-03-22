@@ -16,9 +16,26 @@ repositories {
 }
 
 dependencies {
+	// Spring Boot 및 관련 라이브러리
 	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'javax.servlet:javax.servlet-api:4.0.1'
+	
+	
+	
+	// Springfox
+	//implementation 'io.springfox:springfox-boot-starter:3.0.0'
+	
+	// Springdoc OpenAPI Starter
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2' // Springdoc OpenAPI Starter 버전 변경
+	
+	// MariaDB JDBC
+	implementation 'org.mariadb.jdbc:mariadb-java-client'
+	
 }
 
 tasks.named('test') {
