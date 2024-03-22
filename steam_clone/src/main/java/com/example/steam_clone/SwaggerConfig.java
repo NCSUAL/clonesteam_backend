@@ -9,23 +9,15 @@ import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 
 import io.swagger.v3.oas.models.info.Info;
-import io.swagger.v3.oas.models.security.SecurityRequirement;
-import io.swagger.v3.oas.models.security.SecurityScheme;
 
 
 @Configuration
 public class SwaggerConfig {
-	@Bean
-    public OpenAPI customOpenAPI() {
+    @Bean
+    public OpenAPI openAPI() {
         return new OpenAPI()
-                .components(new Components().addSecuritySchemes("CSRFToken",
-                        new SecurityScheme()
-                        .name("X-CSRF-TOKEN")
-                        .type(SecurityScheme.Type.APIKEY)
-                        .in(SecurityScheme.In.HEADER)
-                        .description("CSRF Token Header")))
-                .info(new Info().title("Application API").version("v1"))
-                .addSecurityItem(new SecurityRequirement().addList("CSRFToken"));
+                .components(new Components())
+                .info(apiInfo());
     }
 
     private Info apiInfo() {
