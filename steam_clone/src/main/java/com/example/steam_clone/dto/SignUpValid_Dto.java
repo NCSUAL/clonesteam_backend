@@ -1,14 +1,9 @@
-package com.example.steam_clone.model;
+package com.example.steam_clone.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-
-@Entity
-public class Membership {
-    @Id
+public class SignUpValid_Dto {
+    private String email;
     private String id;
     private String password;
-    private String email;
 
     public String getEmail() {
         return email;
