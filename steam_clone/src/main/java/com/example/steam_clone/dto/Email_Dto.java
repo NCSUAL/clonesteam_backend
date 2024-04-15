@@ -1,7 +1,7 @@
 package com.example.steam_clone.dto;
 
 
-public class EmailValid_Dto {
+public class Email_Dto {
     private String email;
 
     public String getEmail() {
