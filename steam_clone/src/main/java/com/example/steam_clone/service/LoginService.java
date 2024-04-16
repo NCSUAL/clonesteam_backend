@@ -56,9 +56,10 @@ public class LoginService {
 
         if(membership==null){
             membership = new Membership();
-            //이메일을 포함시켜야 합니다.
-            membership.setEmail(signUpValidDto.getEmail());
+            //이메일을 포함시켜야 합니다
             membership.setId(signUpValidDto.getId());
+            membership.setUsername(signUpValidDto.getId());
+            membership.setEmail(signUpValidDto.getEmail());
             membership.setPassword(bCryptPasswordEncoder.encode(signUpValidDto.getPassword()));
 
             membershipRepository.save(membership);
